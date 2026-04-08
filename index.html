@@ -3,8 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ Meta Pixel Code（已幫你放好） -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '921312050666974');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=921312050666974&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <title>全台互助會 - 清新高質感首頁</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 /* ===== 全局 ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins","Noto Sans TC";}
@@ -13,9 +35,9 @@ body{background: linear-gradient(135deg, #D6F0FF, #FFFFFF); color:#1A2B3C; line-
 /* ===== 內容容器靠中 ===== */
 .main-container{
   width: 100%;
-  max-width: 1200px; /* 最大寬度 */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* 左右間距 */
+  padding: 0 20px;
 }
 
 /* ===== Header ===== */
@@ -55,7 +77,7 @@ body{background: linear-gradient(135deg, #D6F0FF, #FFFFFF); color:#1A2B3C; line-
 /* ===== 統計卡 ===== */
 .mini-stats{display:flex; gap:20px; flex-wrap:wrap; justify-content:center;}
 .mini{
-  flex:0 0 150px; /* 固定寬度，避免抖動 */
+  flex:0 0 150px;
   background:#E6F2FF; padding:20px; border-radius:16px;
   text-align:center; font-weight:700; font-size:18px; color:#1E90FF;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -104,13 +126,7 @@ body{background: linear-gradient(135deg, #D6F0FF, #FFFFFF); color:#1A2B3C; line-
 }
 .chat-msg.left{background:#F1F7FF; color:#333;}
 .chat-msg.right{background:#1E90FF; color:#fff; margin-left:auto;}
-@keyframes fadeInUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
-.chat-msg:nth-child(1){animation-delay:0.3s;}
-.chat-msg:nth-child(2){animation-delay:0.8s;}
-.chat-msg:nth-child(3){animation-delay:1.3s;}
-.chat-msg:nth-child(4){animation-delay:1.8s;}
-.chat-msg:nth-child(5){animation-delay:2.3s;}
-.chat-msg:nth-child(6){animation-delay:2.8s;}
+@keyframes fadeInUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}
 
 /* ===== 響應式 ===== */
 @media(max-width:768px){
@@ -120,99 +136,3 @@ body{background: linear-gradient(135deg, #D6F0FF, #FFFFFF); color:#1A2B3C; line-
 }
 </style>
 </head>
-<body>
-
-<div class="main-container">
-
-  <div class="bg-text-big">全台互助會</div>
-
-  <header class="header">
-    <div class="logo">全台互助會</div>
-    <a href="https://line.me/ti/p/~841lsoqs" class="btn">立即申請</a>
-  </header>
-
-  <section class="hero">
-    <div class="hero-left">
-      <h1>快速借款體驗</h1>
-      <p>60秒審核｜最高150,000｜免聯徵</p>
-    </div>
-
-    <!-- 假聊天框 -->
-    <div class="chat-demo">
-      <div class="chat-box">
-        <div class="chat-msg left">您好，我想申請借款</div>
-        <div class="chat-msg right">您好，請問大約需要多少金額呢？</div>
-        <div class="chat-msg left">大約 50,000 元</div>
-        <div class="chat-msg right">了解，我們可立即幫您評估 👍</div>
-        <div class="chat-msg left">需要準備什麼資料？</div>
-        <div class="chat-msg right">基本資料即可，流程非常簡單</div>
-      </div>
-    </div>
-
-    <div>
-      <div class="card">
-        <h3>借款優勢</h3>
-        <p>✔ AI快速審核</p>
-        <p>✔ 不查聯徵</p>
-        <p>✔ 資料全程加密</p>
-      </div>
-
-      <div class="mini-stats">
-        <div class="mini" id="userCount">
-          <span class="number">0</span>
-          <span class="label">用戶</span>
-        </div>
-        <div class="mini">
-          <span class="number">98%</span>
-          <span class="label">通過率</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>最高借款額度</h3>
-        <p style="font-size:28px; color:#1E90FF;">150,000 元</p>
-        <a href="https://line.me/ti/p/~841lsoqs" class="btn">立即申請</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>用戶評價</h2>
-    <div class="reviews">
-      <div class="review">👍 核准迅速</div>
-      <div class="review">💬 方便操作</div>
-      <div class="review">💰 緊急資金救星</div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>申請流程</h2>
-    <div class="steps">
-      <div class="step">填資料</div>
-      <div class="step">審核</div>
-      <div class="step">撥款</div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>立即申請，快速取得資金</h2>
-    <a href="https://line.me/ti/p/~@693shdql">馬上諮詢</a>
-  </section>
-
-</div> <!-- main-container -->
-
-<script>
-// 用戶數動畫（卡片寬度固定 → 不抖動）
-const userCounterNumber = document.querySelector('#userCount .number');
-let target = 100000;
-let current = 0;
-let step = Math.ceil(target / 200);
-let interval = setInterval(() => {
-  current += step;
-  if (current >= target) { current = target; clearInterval(interval); }
-  userCounterNumber.textContent = current.toLocaleString();
-}, 20);
-</script>
-
-</body>
-</html>
